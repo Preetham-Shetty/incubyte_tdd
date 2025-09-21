@@ -56,15 +56,16 @@ Each commit represents **evolution of the solution** in baby steps.
 incubyte_tdd/
 │
 ├── lib/
-│ ├── bank_account.dart # Core domain logic
-│ └── account_summary_widget.dart # Simple UI to display account balance
+│   ├── bank_account.dart              # Core domain logic
+│   └── account_summary_widget.dart    # Simple UI to display account balance
 │
 ├── test/
-│ ├── bank_account_test.dart # Unit tests (deposit, withdraw, transfer)
-│ └── account_summary_widget_test.dart # Widget test for balance display
+│   ├── bank_account_test.dart         # Unit tests (deposit, withdraw, transfer)
+│   └── account_summary_widget_test.dart # Widget test for balance display
 │
-├── pubspec.yaml # Dependencies
-└── README.md # You are here!
+├── pubspec.yaml                       # Dependencies
+└── README.md                          # You are here!
+
 
 ## 🚀 How This Shows TDD Discipline
 Each feature was introduced by writing a failing test first.
