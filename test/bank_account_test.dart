@@ -26,5 +26,14 @@ void main() {
       account.deposit(50);
       expect(() => account.withdraw(100), throwsA(isA<Exception>()));
     });
+
+    test('transfer moves money between accounts', () {
+      final a1 = BankAccount();
+      final a2 = BankAccount();
+      a1.deposit(100);
+      a1.transferTo(a2, 40);
+      expect(a1.balance, 60);
+      expect(a2.balance, 40);
+    });
   });
 }
