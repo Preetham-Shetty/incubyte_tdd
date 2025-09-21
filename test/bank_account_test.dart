@@ -7,5 +7,11 @@ void main() {
       final account = BankAccount();
       expect(account.balance, 0);
     });
+
+    test('deposit increases balance', () {
+      final account = BankAccount();
+      account.deposit(100);
+      expect(account.balance, 100);
+    });
   });
 }
