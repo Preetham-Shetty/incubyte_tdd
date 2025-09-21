@@ -13,5 +13,18 @@ void main() {
       account.deposit(100);
       expect(account.balance, 100);
     });
+
+    test('withdraw decreases balance', () {
+      final account = BankAccount();
+      account.deposit(200);
+      account.withdraw(50);
+      expect(account.balance, 150);
+    });
+
+    test('cannot withdraw more than balance', () {
+      final account = BankAccount();
+      account.deposit(50);
+      expect(() => account.withdraw(100), throwsA(isA<Exception>()));
+    });
   });
 }
