@@ -12,4 +12,9 @@ class BankAccount {
     if (amount > _balance) throw Exception('Insufficient funds');
     _balance -= amount;
   }
+
+  void transferTo(BankAccount account, int amount) {
+    withdraw(amount);
+    account.deposit(amount);
+  }
 }
